@@ -34,7 +34,7 @@ const DashboardPage = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          "http://localhost:5000/api/admin/contacts",
+          "https://mailbackend.teamgrid.io/api/admin/contacts",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -108,6 +108,7 @@ const DashboardPage = () => {
           elevation={3}
           sx={{
             mt: 4,
+            mb:5,
             p: { xs: 1, sm: 2 },
             boxShadow: 4,
             borderRadius: 2,
@@ -120,9 +121,9 @@ const DashboardPage = () => {
                 <TableRow sx={{ backgroundColor: theme.palette.grey[200] }}>
                   <TableCell sx={{ fontWeight: 600 }}>Full Name</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Work Email</TableCell>
-                  <TableCell sx={{ fontWeight: 600 }}>Phone Number</TableCell>
+                  {/* <TableCell sx={{ fontWeight: 600 }}>Phone Number</TableCell> */}
                   <TableCell sx={{ fontWeight: 600 }}>Company</TableCell>
-                  <TableCell sx={{ fontWeight: 600 }}>Topics</TableCell>
+                  {/* <TableCell sx={{ fontWeight: 600 }}>Topics</TableCell> */}
                   <TableCell sx={{ fontWeight: 600 }}>Message</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Attachments</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Date</TableCell>
@@ -142,13 +143,13 @@ const DashboardPage = () => {
                   >
                     <TableCell>{contact.fullName}</TableCell>
                     <TableCell>{contact.workEmail}</TableCell>
-                    <TableCell>{contact.phoneNumber || "-"}</TableCell>
+                    {/* <TableCell>{contact.phoneNumber || "-"}</TableCell> */}
                     <TableCell>{contact.company || "-"}</TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       {contact.topics && contact.topics.length > 0
                         ? contact.topics.join(", ")
                         : "-"}
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell>{contact.message}</TableCell>
                     <TableCell>
                       {contact.attachments && contact.attachments.length > 0
@@ -158,7 +159,7 @@ const DashboardPage = () => {
                               href={
                                 a.startsWith("http")
                                   ? a
-                                  : `http://localhost:5000/${a}`
+                                  : `https://mailbackend.teamgrid.io/${a}`
                               }
                               target="_blank"
                               rel="noopener noreferrer"

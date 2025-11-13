@@ -10,7 +10,7 @@ import {
   Paper,
 } from "@mui/material";
 import axios from "axios";
-import shortLogo from "./assets/Layer_1.svg";
+import shortLogo from "./assets/Layer_1.png";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +24,7 @@ const LoginPage = () => {
     setError("");
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/admin/login", {
+      const res = await axios.post("https://mailbackend.teamgrid.io/api/admin/login", {
         email,
         password,
       });
