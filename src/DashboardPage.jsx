@@ -108,7 +108,7 @@ const DashboardPage = () => {
           elevation={3}
           sx={{
             mt: 4,
-            mb:5,
+            mb: 5,
             p: { xs: 1, sm: 2 },
             boxShadow: 4,
             borderRadius: 2,
@@ -121,9 +121,9 @@ const DashboardPage = () => {
                 <TableRow sx={{ backgroundColor: theme.palette.grey[200] }}>
                   <TableCell sx={{ fontWeight: 600 }}>Full Name</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Work Email</TableCell>
-                  {/* <TableCell sx={{ fontWeight: 600 }}>Phone Number</TableCell> */}
                   <TableCell sx={{ fontWeight: 600 }}>Company</TableCell>
-                  {/* <TableCell sx={{ fontWeight: 600 }}>Topics</TableCell> */}
+                  <TableCell sx={{ fontWeight: 600 }}>Type of Query</TableCell>
+                  <TableCell sx={{ fontWeight: 600 }}>From Page</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Message</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Attachments</TableCell>
                   <TableCell sx={{ fontWeight: 600 }}>Date</TableCell>
@@ -143,13 +143,9 @@ const DashboardPage = () => {
                   >
                     <TableCell>{contact.fullName}</TableCell>
                     <TableCell>{contact.workEmail}</TableCell>
-                    {/* <TableCell>{contact.phoneNumber || "-"}</TableCell> */}
                     <TableCell>{contact.company || "-"}</TableCell>
-                    {/* <TableCell>
-                      {contact.topics && contact.topics.length > 0
-                        ? contact.topics.join(", ")
-                        : "-"}
-                    </TableCell> */}
+                    <TableCell>{contact.typeOfQuery || "-"}</TableCell>
+                    <TableCell>{contact.fromPage || "-"}</TableCell>
                     <TableCell>{contact.message}</TableCell>
                     <TableCell>
                       {contact.attachments && contact.attachments.length > 0
