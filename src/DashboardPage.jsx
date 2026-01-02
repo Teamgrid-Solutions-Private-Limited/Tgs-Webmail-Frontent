@@ -58,6 +58,9 @@ const DashboardPage = () => {
     navigate("/login");
   };
 
+  console.log(contacts);
+  
+
   return (
     <Container
       maxWidth={false}
@@ -144,7 +147,7 @@ const DashboardPage = () => {
                     <TableCell>{contact.fullName}</TableCell>
                     <TableCell>{contact.workEmail}</TableCell>
                     <TableCell>{contact.company || "-"}</TableCell>
-                    <TableCell>{contact.typeOfQuery || "-"}</TableCell>
+                    <TableCell>{contact.typeofQuery || "-"}</TableCell>
                     <TableCell>{contact.fromPage || "-"}</TableCell>
                     <TableCell>{contact.message}</TableCell>
                     <TableCell>
